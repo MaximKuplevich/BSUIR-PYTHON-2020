@@ -1,4 +1,4 @@
-p = "/home/maxim/Документы/Lab1/venv/data1"
+p = "data1"
 def GetDict(path):
 
     with open(path, "r") as file:
