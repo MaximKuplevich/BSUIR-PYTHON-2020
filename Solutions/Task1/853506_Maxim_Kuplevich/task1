@@ -1,0 +1,14 @@
+p = "/home/maxim/Документы/Lab1/venv/data1"
+def GetDict(path):
+
+    with open(path, "r") as file:
+        s = file.read()
+
+    s = s.split()
+    d = dict.fromkeys(s, 0)
+    for i in d.keys():
+        for j in s:
+            if(i == j):
+                d.update({i : d.get(i) + 1})
+    return d
+print(GetDict(p))
