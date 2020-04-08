@@ -1,0 +1,32 @@
+path = "/home/maxim/Документы/Lab1/venv/data3"
+with open(path, "r") as file:
+    numbs = [int(i) for i in file.read().split()]
+
+def MergeSort(nums):
+    if len(nums) > 1:
+        mid = len(nums) // 2
+        lefthalf = nums[:mid]
+        righthalf = nums[mid:]
+        MergeSort(lefthalf)
+        MergeSort(righthalf)
+        i = j = k = 0
+        while i < len(lefthalf) and j < len(righthalf):
+            if lefthalf[i] < righthalf[j]:
+                nums[k] = lefthalf[i]
+                i += 1
+                k += 1
+            else:
+                nums[k] = righthalf[j]
+                j += 1
+                k += 1
+
+        while i < len(lefthalf):
+            nums[k] = lefthalf[i]
+            i += 1
+            k += 1
+        while j < len(righthalf):
+            nums[k] = righthalf[j]
+            j += 1
+            k += 1
+MergeSort(numbs)
+print(numbs)
