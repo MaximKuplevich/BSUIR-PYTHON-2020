@@ -1,0 +1,11 @@
+def FibonacciGen(n):
+    fib1, fib2 = 1, 1
+    while fib1< n:
+        yield fib1
+        fib1, fib2 = fib2, fib1 + fib2
+
+path = "/home/maxim/Документы/Lab1/venv/addData1"
+with open(path, "r") as file:
+    num = int(file.read())
+for n in FibonacciGen(num):
+    print(n)
