@@ -1,4 +1,4 @@
-path = "venv/data3"
+path = "data3"
 with open(path, "r") as file:
     numbs = [int(i) for i in file.read().split()]
 
