@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from task1 import GetDict
 
-p = "/home/maxim/Документы/Lab1/venv/data1"
+p = "venv/data1"
 d = GetDict(p)
 od = OrderedDict(sorted(d.items(), key = lambda t: -t[1]))
 l = list()
